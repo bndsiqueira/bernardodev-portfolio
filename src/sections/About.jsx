@@ -29,33 +29,34 @@ export default function About() {
             /* Versão estática em mobile */
             <div className="relative w-full max-w-xs mx-auto overflow-hidden border-2 shadow-lg rounded-3xl border-yellow-500/10">
               <img
-                src="/images/bernardo-foto.jpg"
-                alt="Foto de Bernardo"
-                className="object-cover w-full h-auto rounded-2xl"
-                loading="lazy"
-              />
+  src={`${import.meta.env.BASE_URL}images/bernardo-foto.jpg`}
+  alt="Foto de Bernardo"
+  className="object-cover w-full h-auto rounded-2xl"
+  loading="lazy"
+/>
             </div>
           ) : (
             /* Tilt no desktop */
-            <Tilt
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              glareEnable
-              glareMaxOpacity={0.12}
-              scale={1.03}
-              transitionSpeed={1200}
-              className="relative w-full max-w-xs mx-auto"
-            >
-              <div className="absolute inset-0 z-0 rounded-3xl bg-gradient-to-br from-yellow-400 to-amber-500 opacity-30 blur-lg animate-pulse" />
-              <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-yellow-500/10 glass p-[3px]">
-                <img
-                  src="/images/bernardo-foto.jpg"
-                  alt="Foto de Bernardo"
-                  className="object-cover w-full h-auto rounded-2xl"
-                  loading="lazy"
-                />
-              </div>
-            </Tilt>
+<Tilt
+  tiltMaxAngleX={10}
+  tiltMaxAngleY={10}
+  glareEnable
+  glareMaxOpacity={0.12}
+  scale={1.03}
+  transitionSpeed={1200}
+  className="relative w-full max-w-xs mx-auto"
+>
+  <div className="absolute inset-0 z-0 rounded-3xl bg-gradient-to-br from-yellow-400 to-amber-500 opacity-30 blur-lg animate-pulse" />
+  <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-yellow-500/10 glass p-[3px]">
+    <img
+      src={`${import.meta.env.BASE_URL}images/bernardo-foto.jpg`}
+      alt="Foto de Bernardo"
+      className="object-cover w-full h-auto rounded-2xl"
+      loading="lazy"
+    />
+  </div>
+</Tilt>
+
           )}
         </motion.div>
 

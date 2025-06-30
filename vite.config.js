@@ -3,7 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio-incomparavel/", // nome do seu repositório
+  base: "/bernardodev-portfolio/", // nome exato do repositório
 });
-
-
