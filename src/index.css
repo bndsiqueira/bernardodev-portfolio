@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fundo transparente global */
+html, body {
+  background-color: transparent !important;
+  scroll-behavior: smooth;
+}

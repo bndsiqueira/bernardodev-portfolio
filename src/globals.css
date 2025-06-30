@@ -1,0 +1,99 @@
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg at 50% 50%, #facc15, #f59e0b, #facc15);
+  animation: rotate 4s linear infinite;
+  z-index: -2;
+  opacity: 0.25;
+  filter: blur(25px);
+  border-radius: 50%;
+}
+.btn-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+html, body, #root {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.6), 0 0 35px rgba(16, 185, 129, 0.4);
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilo vidro fosco */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* Animação de blobs no fundo */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bg-blobs div {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.2;
+  animation: pulse 10s infinite ease-in-out;
+}
+.bg-blobs .blob1 {
+  top: 0;
+  left: 25%;
+  width: 18rem;
+  height: 18rem;
+  background-color: #4f46e5;
+}
+.bg-blobs .blob2 {
+  top: 30%;
+  right: 25%;
+  width: 24rem;
+  height: 24rem;
+  background-color: #10b981;
+}
+.bg-blobs .blob3 {
+  bottom: 0;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  background-color: #7c3aed;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.1) translateY(-10px); }
+}
