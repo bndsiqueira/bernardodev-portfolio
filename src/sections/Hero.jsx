@@ -119,7 +119,7 @@ export default function Hero() {
               >
                 <div className="absolute inset-0">
                   <img
-                    src="/images/FrontEndDeveloper.jpg"
+                    src="images/FrontEndDeveloper.jpg"
                     alt="Bernardo"
                     className="object-cover w-full h-full scale-110 blur-sm opacity-80"
                     loading="lazy"
@@ -132,8 +132,7 @@ export default function Hero() {
                     Soluções de Alto Nível
                   </h3>
                   <p className="text-sm text-gray-200">
-                    Sites refinados, automações poderosas e experiências
-                    digitais que encantam.
+                    Sites personalizados &amp; automações inteligentes.
                   </p>
                   <div className="grid grid-cols-2 gap-3 text-sm text-yellow-200">
                     <div className="flex items-center space-x-2">
